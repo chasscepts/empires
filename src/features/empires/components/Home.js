@@ -7,6 +7,17 @@ import Loader from './Loader';
 import ErrorPage from './ErrorPage';
 import EmpireLink from './EmpireLink';
 
+const styles = {
+  heading: {
+    margin: 0,
+    padding: '10px',
+    fontSize: '1.1rem',
+    textTransformation: 'uppercase',
+    backgroundColor: '#35548b',
+    color: '#fff',
+  },
+};
+
 export default function Home() {
   const empires = useSelector(selectAll);
   const status = useSelector(selectStatus);
@@ -35,10 +46,11 @@ export default function Home() {
 
   return (
     <Wrapper>
-      <ul>
+      <h2 style={styles.heading}>Civilizations</h2>
+      <ul className="links-wrap">
         {empires.map(
           (empire, index) => (
-            <li key={empire.id}>
+            <li key={empire.id} className="square">
               <EmpireLink id={empire.id} name={empire.name} index={index} />
             </li>
           ),

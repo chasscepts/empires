@@ -74,7 +74,6 @@ export const loadAllAsync = () => (dispatch, getState) => {
 
 export const loadPageAsync = (id) => (dispatch, getState) => {
   const state = getState();
-  console.log(state);
   if (state.empires.status === loadStatuses.PRISTINE) {
     dispatch(setStatus(loadStatuses.LOADING));
     fetchEmpires()
