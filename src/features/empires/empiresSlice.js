@@ -33,11 +33,16 @@ export const empiresSlice = createSlice({
       state.status = loadStatuses.SUCCESS;
     },
     loadPage: (state, action) => {
+      if (action.payload.empires) {
+        state.civilizations = action.payload.empires;
+        state.status = loadStatuses.SUCCESS;
+      }
+      if (state.status === loadStatuses.LOADING) return;
       if (state.status === loadStatuses.FAILED) {
         state.pageError = 'Unable to load empires from external API. Please refresh your browser to reload.';
         return;
       }
-      const page = state.civilizations.find((empire) => `${empire.id}` === action.payload);
+      const page = state.civilizations.find((empire) => `${empire.id}` === action.payload.id);
       if (page) {
         state.selectedCivilization = page;
         state.pageError = null;
@@ -56,7 +61,7 @@ export const {
 export const loadAllAsync = () => (dispatch, getState) => {
   const state = getState();
   if (state.empires.status === loadStatuses.PRISTINE) {
-    setStatus(loadStatuses.LOADING);
+    dispatch(setStatus(loadStatuses.LOADING));
     fetchEmpires()
       .then((empires) => {
         dispatch(loadAll(empires));
@@ -69,19 +74,19 @@ export const loadAllAsync = () => (dispatch, getState) => {
 
 export const loadPageAsync = (id) => (dispatch, getState) => {
   const state = getState();
+  console.log(state);
   if (state.empires.status === loadStatuses.PRISTINE) {
-    setStatus(loadStatuses.LOADING);
+    dispatch(setStatus(loadStatuses.LOADING));
     fetchEmpires()
       .then((empires) => {
-        dispatch(loadAll(empires));
-        dispatch(loadPage(id));
+        dispatch(loadPage({ id, empires }));
       })
       .catch((err) => {
         dispatch(setLoadError(normalizeError(err)));
-        dispatch(loadPage(id));
+        dispatch(loadPage({ id }));
       });
   } else {
-    dispatch(loadPage(id));
+    dispatch(loadPage({ id }));
   }
 };
 
