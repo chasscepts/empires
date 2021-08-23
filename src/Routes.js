@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Details from './Details';
-import Home from './Home';
+import Details from './features/empires/components/Details';
+import Home from './features/empires/components/Home';
 
 export default function Routes() {
   return (
