@@ -1,5 +1,3 @@
-import AppHeader from './AppHeader';
-
 const styles = {
   h1: {
     textAlign: 'center',
@@ -10,7 +8,6 @@ const styles = {
 export default function Loader() {
   return (
     <>
-      <AppHeader />
       <h1 style={styles.h1}>Loading ... </h1>
     </>
   );

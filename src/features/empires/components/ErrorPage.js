@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import AppHeader from './AppHeader';
 
 const styles = {
   h1: {
@@ -11,7 +10,6 @@ const styles = {
 export default function ErrorPage({ message }) {
   return (
     <>
-      <AppHeader />
       <h1 style={styles.h1}>{message}</h1>
     </>
   );
