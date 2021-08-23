@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import {
-  selectEmpire, selectStatus, selectLoadError, selectPageError, loadStatuses, loadPage,
+  selectEmpire, selectStatus, selectLoadError, selectPageError, loadStatuses, loadPageAsync,
 } from '../empiresSlice';
 import Wrapper from './Wrapper';
 import Loader from './Loader';
@@ -15,7 +15,7 @@ export default function Details() {
   const loadError = useSelector(selectLoadError);
   const dispatch = useDispatch();
 
-  dispatch(loadPage(id));
+  dispatch(loadPageAsync(id));
 
   if (status === loadStatuses.PRISTINE) return <Wrapper />;
 
