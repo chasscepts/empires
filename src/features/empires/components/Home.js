@@ -5,8 +5,7 @@ import {
 import Wrapper from './Wrapper';
 import Loader from './Loader';
 import ErrorPage from './ErrorPage';
-import EmpireLink from './EmpireLink';
-import styles from './Home.module.css';
+import EmpireLinks from './EmpireLinks';
 
 export default function Home() {
   const empires = useSelector(selectAll);
@@ -34,18 +33,5 @@ export default function Home() {
     );
   }
 
-  return (
-    <Wrapper>
-      <h2 className={styles.heading}>Civilizations</h2>
-      <ul className={styles.wrap}>
-        {empires.map(
-          (empire, index) => (
-            <li key={empire.id} className={styles.square}>
-              <EmpireLink id={empire.id} name={empire.name} index={index} />
-            </li>
-          ),
-        )}
-      </ul>
-    </Wrapper>
-  );
+  return <EmpireLinks empires={empires} />;
 }
