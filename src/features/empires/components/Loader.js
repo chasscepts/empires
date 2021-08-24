@@ -1,14 +1,20 @@
+import './Loader.css';
+
 const styles = {
-  h1: {
-    textAlign: 'center',
-    marginTop: '40px',
+  wrap: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 };
 
 export default function Loader() {
   return (
-    <>
-      <h1 style={styles.h1}>Loading ... </h1>
-    </>
+    <div className="body-fill" style={styles.wrap}>
+      <div className="lds-ripple">
+        <div />
+        <div />
+      </div>
+    </div>
   );
 }

@@ -113,6 +113,11 @@ ul.plain {
   background-color: #3e61a3;
 }
 
+.body-fill {
+  background-color: #4268AF;
+  height: calc(100vh - 83px);
+}
+
 @media only screen and (min-width: 576px) {
   .container {
     width: 540px;
