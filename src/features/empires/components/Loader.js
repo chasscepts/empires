@@ -1,17 +1,9 @@
-import './Loader.css';
-
-const styles = {
-  wrap: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-};
+import styles from './Loader.module.css';
 
 export default function Loader() {
   return (
-    <div className="body-fill" style={styles.wrap}>
-      <div className="lds-ripple">
+    <div className={styles.wrap}>
+      <div className={styles.ldsRipple}>
         <div />
         <div />
       </div>

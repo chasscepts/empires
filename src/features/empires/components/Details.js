@@ -6,42 +6,7 @@ import {
 import Wrapper from './Wrapper';
 import Loader from './Loader';
 import ErrorPage from './ErrorPage';
-
-const styles = {
-  heading: {
-    margin: 0,
-    padding: '10px',
-    textTransformation: 'uppercase',
-    backgroundColor: '#35548b',
-    color: '#fff',
-  },
-  name: {
-    display: 'block',
-    fontSize: '1.6rem',
-  },
-  expansion: {
-    display: 'block',
-    fontSize: '1.2rem',
-  },
-  lightBg: {
-    color: '#fff',
-    backgroundColor: '#4268AF',
-    padding: '10px 20px',
-  },
-  darkBg: {
-    color: '#fff',
-    backgroundColor: '#3e61a3',
-    padding: '10px 20px',
-  },
-  groupHeading: {
-    fontWeight: 'bold',
-    paddingBottom: '8px',
-  },
-  link: {
-    cursor: 'pointer',
-    textDecoration: 'underline',
-  },
-};
+import styles from './Details.module.css';
 
 const linkName = (link) => link.split('/').pop().replace('_', ' ');
 
@@ -91,39 +56,39 @@ export default function Details() {
 
   return (
     <Wrapper>
-      <h2 style={styles.heading}>
-        <span style={styles.name}>{empire.name}</span>
-        <span style={styles.expansion}>{empire.expansion}</span>
+      <h2 className={styles.heading}>
+        <span className={styles.name}>{empire.name}</span>
+        <span className={styles.expansion}>{empire.expansion}</span>
       </h2>
-      <div style={styles.lightBg}>
-        <div style={styles.groupHeading}>Army Type</div>
-        <div className="item">{empire.army_type}</div>
+      <div className={styles.lightBg}>
+        <div className={styles.groupHeading}>Army Type</div>
+        <div className={styles.item}>{empire.army_type}</div>
       </div>
-      <div style={styles.darkBg}>
-        <div style={styles.groupHeading}>Team Bonus</div>
-        <div className="item">{empire.team_bonus}</div>
+      <div className={styles.darkBg}>
+        <div className={styles.groupHeading}>Team Bonus</div>
+        <div className={styles.item}>{empire.team_bonus}</div>
       </div>
-      <div style={styles.lightBg}>
-        <div style={styles.groupHeading}>Civilization Bonus</div>
-        <div className="plain">
+      <div className={styles.lightBg}>
+        <div className={styles.groupHeading}>Civilization Bonus</div>
+        <div>
           {empire.civilization_bonus.map((bonus) => (
-            <div className="item" key={bonus}>{bonus}</div>
+            <div className={styles.item} key={bonus}>{bonus}</div>
           ))}
         </div>
       </div>
-      <div style={styles.darkBg}>
-        <div style={styles.groupHeading}>Unique Unit</div>
-        <div className="plain">
+      <div className={styles.darkBg}>
+        <div className={styles.groupHeading}>Unique Unit</div>
+        <div>
           {empire.unique_unit.map((unit) => (
-            <div className="item" style={styles.link} key={unit} title="Link disabled">{linkName(unit)}</div>
+            <div className={styles.itemLink} key={unit} title="Link disabled">{linkName(unit)}</div>
           ))}
         </div>
       </div>
-      <div style={styles.lightBg}>
-        <div style={styles.groupHeading}>Unique Technology</div>
-        <div className="plain">
+      <div className={styles.lightBg}>
+        <div className={styles.groupHeading}>Unique Technology</div>
+        <div>
           {empire.unique_tech.map((tech) => (
-            <div className="item" style={styles.link} key={tech} title="Link disabled">{linkName(tech)}</div>
+            <div className={styles.itemLink} key={tech} title="Link disabled">{linkName(tech)}</div>
           ))}
         </div>
       </div>

@@ -1,0 +1,31 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #4268AF;
+  height: calc(100vh - 83px);
+}
+
+.headingWrap {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #c31212;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-left: 10px;
+  color: #c31212;
+}
+
+.svg {
+  width: 24px;
+  height: 24px;
+}
+
+.message {
+  font-size: 1.4rem;
+  margin: 15px 0 0;
+}

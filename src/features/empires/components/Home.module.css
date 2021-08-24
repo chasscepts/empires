@@ -1,0 +1,110 @@
+.wrap {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  padding: 0;
+}
+
+.square {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.square:nth-child(4n + 1),
+.square:nth-child(4n) {
+  background-color: #4268AF;
+}
+
+.square:nth-child(4n + 2),
+.square:nth-child(4n + 3) {
+  background-color: #3e61a3;
+}
+
+.heading {
+  margin: 0;
+  padding: 10px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  background-color: #35548b;
+  color: #fff;
+}
+
+@media only screen and (min-width: 576px) {
+  .wrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .square:nth-child(odd) {
+    background-color: #4268AF;
+  }
+
+  .square:nth-child(even) {
+    background-color: #3e61a3;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .wrap {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .square:nth-child(8n),
+  .square:nth-child(8n + 1),
+  .square:nth-child(8n + 3),
+  .square:nth-child(8n + 6) {
+    background-color: #4268AF;
+  }
+
+  .square:nth-child(8n + 2),
+  .square:nth-child(8n + 4),
+  .square:nth-child(8n + 5),
+  .square:nth-child(8n + 7) {
+    background-color: #3e61a3;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .wrap {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .square:nth-child(odd) {
+    background-color: #4268AF;
+  }
+
+  .square:nth-child(even) {
+    background-color: #3e61a3;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrap {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .square:nth-child(12n + 1),
+  .square:nth-child(12n + 3),
+  .square:nth-child(12n + 5),
+  .square:nth-child(12n + 8),
+  .square:nth-child(12n + 10),
+  .square:nth-child(12n) {
+    background-color: #4268AF;
+  }
+
+  .square:nth-child(12n + 2),
+  .square:nth-child(12n + 4),
+  .square:nth-child(12n + 6),
+  .square:nth-child(12n + 7),
+  .square:nth-child(12n + 9),
+  .square:nth-child(12n + 11) {
+    background-color: #3e61a3;
+  }
+}

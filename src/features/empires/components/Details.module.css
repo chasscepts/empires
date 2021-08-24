@@ -1,0 +1,54 @@
+.heading {
+  margin: 0;
+  padding: 10px;
+  text-transform: uppercase;
+  background-color: #35548b;
+  color: #fff;
+}
+
+.name {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.expansion {
+  display: block;
+  font-size: 1.2rem;
+}
+
+.lightBg {
+  color: #fff;
+  background-color: #4268AF;
+  padding: 10px 20px;
+}
+
+.darkBg {
+  color: #fff;
+  background-color: #3e61a3;
+  padding: 10px 20px;
+}
+
+.groupHeading {
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+.itemLink {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.item,
+.itemLink {
+  position: relative;
+  display: block;
+  padding: 5px 25px;
+}
+
+.item::before,
+.itemLink::before {
+  content: '\2606';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}

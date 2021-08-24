@@ -6,17 +6,7 @@ import Wrapper from './Wrapper';
 import Loader from './Loader';
 import ErrorPage from './ErrorPage';
 import EmpireLink from './EmpireLink';
-
-const styles = {
-  heading: {
-    margin: 0,
-    padding: '10px',
-    fontSize: '1.1rem',
-    textTransformation: 'uppercase',
-    backgroundColor: '#35548b',
-    color: '#fff',
-  },
-};
+import styles from './Home.module.css';
 
 export default function Home() {
   const empires = useSelector(selectAll);
@@ -46,11 +36,11 @@ export default function Home() {
 
   return (
     <Wrapper>
-      <h2 style={styles.heading}>Civilizations</h2>
-      <ul className="links-wrap">
+      <h2 className={styles.heading}>Civilizations</h2>
+      <ul className={styles.wrap}>
         {empires.map(
           (empire, index) => (
-            <li key={empire.id} className="square">
+            <li key={empire.id} className={styles.square}>
               <EmpireLink id={empire.id} name={empire.name} index={index} />
             </li>
           ),
