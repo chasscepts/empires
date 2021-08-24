@@ -6,9 +6,7 @@ import {
 import Wrapper from './Wrapper';
 import Loader from './Loader';
 import ErrorPage from './ErrorPage';
-import styles from './Details.module.css';
-
-const linkName = (link) => link.split('/').pop().replace('_', ' ');
+import EmpireDetails from './EmpireDetails';
 
 export default function Details() {
   const { id } = useParams();
@@ -54,44 +52,5 @@ export default function Details() {
     );
   }
 
-  return (
-    <Wrapper>
-      <h2 className={styles.heading}>
-        <span className={styles.name}>{empire.name}</span>
-        <span className={styles.expansion}>{empire.expansion}</span>
-      </h2>
-      <div className={styles.lightBg}>
-        <div className={styles.groupHeading}>Army Type</div>
-        <div className={styles.item}>{empire.army_type}</div>
-      </div>
-      <div className={styles.darkBg}>
-        <div className={styles.groupHeading}>Team Bonus</div>
-        <div className={styles.item}>{empire.team_bonus}</div>
-      </div>
-      <div className={styles.lightBg}>
-        <div className={styles.groupHeading}>Civilization Bonus</div>
-        <div>
-          {empire.civilization_bonus.map((bonus) => (
-            <div className={styles.item} key={bonus}>{bonus}</div>
-          ))}
-        </div>
-      </div>
-      <div className={styles.darkBg}>
-        <div className={styles.groupHeading}>Unique Unit</div>
-        <div>
-          {empire.unique_unit.map((unit) => (
-            <div className={styles.itemLink} key={unit} title="Link disabled">{linkName(unit)}</div>
-          ))}
-        </div>
-      </div>
-      <div className={styles.lightBg}>
-        <div className={styles.groupHeading}>Unique Technology</div>
-        <div>
-          {empire.unique_tech.map((tech) => (
-            <div className={styles.itemLink} key={tech} title="Link disabled">{linkName(tech)}</div>
-          ))}
-        </div>
-      </div>
-    </Wrapper>
-  );
+  return <EmpireDetails empire={empire} />;
 }
