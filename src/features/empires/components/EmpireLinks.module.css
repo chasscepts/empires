@@ -37,6 +37,40 @@
   color: #fff;
 }
 
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+  width: 8px;
+  height: 8px;
+}
+
 @media only screen and (min-width: 576px) {
   .wrap {
     grid-template-columns: repeat(3, 1fr);
