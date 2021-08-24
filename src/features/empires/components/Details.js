@@ -81,6 +81,14 @@ export default function Details() {
     );
   }
 
+  if (!empire) {
+    return (
+      <Wrapper>
+        <Loader />
+      </Wrapper>
+    );
+  }
+
   return (
     <Wrapper>
       <h2 style={styles.heading}>
