@@ -8,7 +8,7 @@ import sample from '../test_helpers/sampleEmpires';
 const empire = sample.civilizations[0];
 
 function Details() {
-  return <EmpireDetails empire={empire} />
+  return <EmpireDetails empire={empire} />;
 }
 
 it('matches snapshot', () => {

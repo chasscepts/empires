@@ -7,7 +7,7 @@ import EmpireLinks from '../EmpireLinks';
 
 jest.mock('axios');
 
-function Links () {
+function Links() {
   return <EmpireLinks empires={sample.civilizations} />;
 }
 

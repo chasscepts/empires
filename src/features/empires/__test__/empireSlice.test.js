@@ -1,7 +1,7 @@
 import reducer, { loadStatuses, loadAll, loadPage } from '../empiresSlice';
 import sample from '../components/test_helpers/sampleEmpires';
 
-const civilizations = sample.civilizations;
+const { civilizations } = sample;
 
 describe('empireSlice', () => {
   it('should return the initial state', () => {
@@ -60,7 +60,7 @@ it('should set page error when empire id is not found', () => {
     selectedCivilization: null,
   };
 
-  expect(reducer(prevState, loadPage({ id: `1000` }))).toStrictEqual({
+  expect(reducer(prevState, loadPage({ id: '1000' }))).toStrictEqual({
     status: loadStatuses.SUCCESS,
     loadError: null,
     pageError: 'Empire with given id could not be found in the database!',

@@ -9,7 +9,7 @@ import App from '../App';
 
 jest.mock('axios');
 
-function Wrapper () {
+function Wrapper() {
   return (
     <Provider store={store}>
       <React.StrictMode>
