@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmpireLinks matches snapshot 1`] = `
+<div
+  className="container"
+>
+  <header
+    className="header"
+  >
+    <h1>
+      Age Of Empires II
+    </h1>
+    <nav>
+      <a
+        className="link"
+        href="/"
+        onClick={[Function]}
+        role="link"
+      >
+        🏠
+      </a>
+    </nav>
+  </header>
+  <h2
+    className="heading"
+  >
+    Civilizations
+  </h2>
+  <ul
+    className="wrap"
+  >
+    <li
+      className="square"
+    >
+      <a
+        href="/empire/1"
+        onClick={[Function]}
+      >
+        <div
+          className="link"
+        >
+          <span>
+            Aztecs
+          </span>
+        </div>
+      </a>
+    </li>
+    <li
+      className="square"
+    >
+      <a
+        href="/empire/2"
+        onClick={[Function]}
+      >
+        <div
+          className="link"
+        >
+          <span>
+            Britons
+          </span>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
+`;
