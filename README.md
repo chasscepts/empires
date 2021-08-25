@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Age Of Empires II
 
-## Available Scripts
+> A react single page application to show information on the civilizations included in the video game 'Age Of Empires II'. The data used in this project is sourced from the API [age-of-empires-2-api.herokuapp.com/](https://age-of-empires-2-api.herokuapp.com/docs/). The project demostrates routing in react spa, redux store and integrating API calls in redux reducers.
 
-In the project directory, you can run:
+![screenshot](./app_screenshot.png)
 
-### `npm start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Live Demo
 
-### `npm test`
+[demo](https://chass-empires.herokuapp.com/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+To get a local copy up and running follow these simple example steps on the command line.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  # Clone the project from it's github repo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  $ git clone https://github.com/chasscepts/empires
 
-### `npm run eject`
+  # Change directory to the root of project
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  $ cd empires
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  # Install all dependencies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  $ npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+  # Open app in your local browser
 
-## Learn More
+  $ npm run start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  # To build the project for production
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  $ npm run build
 
-### Code Splitting
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Authors
 
-### Analyzing the Bundle Size
+👤 **Obetta Francis**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/chasscepts) [![](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/chasscepts) [![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/chasscepts/)
 
-### Making a Progressive Web App
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions, issues, and feature requests are welcome!
 
-### Advanced Configuration
+Feel free to check the [issues page](https://github.com/chasscepts/empires/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Show your support
 
-### Deployment
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Acknowledgments
+- [Official Game Site](https://www.ageofempires.com/games/aoeiide/)
+- [Data Source](https://age-of-empires-2-api.herokuapp.com/docs/)
+- Background Image by [Mathilde Normandeau](https://unsplash.com/@mathildeeee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Splash](https://unsplash.com/s/photos/blue?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- Icon by [Dorsa Masghati](https://unsplash.com/@dorsamasghati?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Splash](https://unsplash.com/s/photos/blue?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+- Microverse Community
+- Everyone whose code was used in this project
 
-### `npm run build` fails to minify
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./LICENSE)
