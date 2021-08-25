@@ -18,9 +18,7 @@ export default function Details() {
 
   dispatch(loadPageAsync(id));
 
-  if (status === loadStatuses.PRISTINE) return <Wrapper />;
-
-  if (status === loadStatuses.LOADING) {
+  if (status === loadStatuses.LOADING || status === loadStatuses.PRISTINE) {
     return (
       <Wrapper>
         <Loader />
