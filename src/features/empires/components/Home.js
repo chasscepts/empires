@@ -15,9 +15,7 @@ export default function Home() {
 
   dispatch(loadAllAsync());
 
-  if (status === loadStatuses.PRISTINE) return <Wrapper />;
-
-  if (status === loadStatuses.LOADING) {
+  if (status === loadStatuses.LOADING || status === loadStatuses.PRISTINE) {
     return (
       <Wrapper>
         <Loader />
