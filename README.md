@@ -59,6 +59,7 @@ Feel free to check the [issues page](https://github.com/chasscepts/empires/issue
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
+- Design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio)
 - [Official Game Site](https://www.ageofempires.com/games/aoeiide/)
 - [Data Source](https://age-of-empires-2-api.herokuapp.com/docs/)
 - Background Image by [Mathilde Normandeau](https://unsplash.com/@mathildeeee?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Splash](https://unsplash.com/s/photos/blue?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
