@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from './EmpireDetails.module.css';
+import styles from '../css/EmpireDetails.module.css';
 import Wrapper from './Wrapper';
 
 const linkName = (link) => link.split('/').pop().replace('_', ' ');

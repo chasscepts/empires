@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import styles from './ErrorPage.module.css';
+import styles from '../css/ErrorPage.module.css';
 
 export default function ErrorPage({ message }) {
   return (

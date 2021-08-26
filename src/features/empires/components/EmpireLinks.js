@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import styles from './EmpireLinks.module.css';
+import styles from '../css/EmpireLinks.module.css';
 import Wrapper from './Wrapper';
 
 function EmpireLink({ id, name }) {

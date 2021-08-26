@@ -2,6 +2,8 @@
 
 # Age Of Empires II
 
+## Catalogue of Statistics
+
 > A react single page application to show information on the civilizations included in the video game 'Age Of Empires II'. The data used in this project is sourced from the API [age-of-empires-2-api.herokuapp.com/](https://age-of-empires-2-api.herokuapp.com/docs/). The project demostrates routing in react spa, redux store and integrating API calls in redux reducers.
 
 ![screenshot](./app_screenshot.png)
@@ -36,6 +38,10 @@ To get a local copy up and running follow these simple example steps on the comm
   # Open app in your local browser
 
   $ npm run start
+
+  # To run the tests
+
+  $ npm run test
 
   # To build the project for production
 
