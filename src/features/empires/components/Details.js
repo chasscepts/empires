@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import {
-  selectEmpire, selectStatus, selectLoadError, selectPageError, loadStatuses, loadPageAsync,
+  selectStatus, selectAll, selectLoadError, loadAsync, STATUSES,
 } from '../empiresSlice';
 import Wrapper from './Wrapper';
 import Loader from './Loader';
@@ -10,15 +10,14 @@ import EmpireDetails from './EmpireDetails';
 
 export default function Details() {
   const { id } = useParams();
-  const empire = useSelector(selectEmpire);
+  const empires = useSelector(selectAll);
   const status = useSelector(selectStatus);
-  const pageError = useSelector(selectPageError);
   const loadError = useSelector(selectLoadError);
   const dispatch = useDispatch();
 
-  dispatch(loadPageAsync(id));
+  dispatch(loadAsync());
 
-  if (status === loadStatuses.LOADING || status === loadStatuses.PRISTINE) {
+  if (status === STATUSES.LOADING || status === STATUSES.PRISTINE) {
     return (
       <Wrapper>
         <Loader />
@@ -26,7 +25,7 @@ export default function Details() {
     );
   }
 
-  if (status === loadStatuses.FAILED) {
+  if (status === STATUSES.FAILED) {
     return (
       <Wrapper>
         <ErrorPage message={loadError} />
@@ -34,18 +33,12 @@ export default function Details() {
     );
   }
 
-  if (pageError) {
-    return (
-      <Wrapper>
-        <ErrorPage message={pageError} />
-      </Wrapper>
-    );
-  }
+  const empire = empires.filter((emp) => `${emp.id}` === id)[0];
 
   if (!empire) {
     return (
       <Wrapper>
-        <Loader />
+        <ErrorPage message="Empire with given id could not be found in the database!" />
       </Wrapper>
     );
   }

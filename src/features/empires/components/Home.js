@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  loadAllAsync, loadStatuses, selectAll, selectLoadError, selectStatus,
+  loadAsync, STATUSES, selectAll, selectLoadError, selectStatus,
 } from '../empiresSlice';
 import Wrapper from './Wrapper';
 import Loader from './Loader';
@@ -13,9 +13,9 @@ export default function Home() {
   const loadError = useSelector(selectLoadError);
   const dispatch = useDispatch();
 
-  dispatch(loadAllAsync());
+  dispatch(loadAsync());
 
-  if (status === loadStatuses.LOADING || status === loadStatuses.PRISTINE) {
+  if (status === STATUSES.LOADING || status === STATUSES.PRISTINE) {
     return (
       <Wrapper>
         <Loader />
@@ -23,7 +23,7 @@ export default function Home() {
     );
   }
 
-  if (status === loadStatuses.FAILED) {
+  if (status === STATUSES.FAILED) {
     return (
       <Wrapper>
         <ErrorPage message={loadError} />
