@@ -25,7 +25,7 @@ describe('empireSlice', () => {
       civilizations,
     });
   });
-  
+
   it('should set error when page failed', () => {
     const error = { message: 'Load Failed!' };
 
