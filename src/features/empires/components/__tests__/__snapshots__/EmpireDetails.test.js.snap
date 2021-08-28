@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="container"
+>
+  <header
+    className="header"
+  >
+    <h1>
+      Age Of Empires II
+    </h1>
+    <nav>
+      <a
+        className="link"
+        href="/"
+        onClick={[Function]}
+        role="link"
+      >
+        🏠
+      </a>
+    </nav>
+  </header>
+  <h2
+    className="heading"
+  >
+    <span
+      className="name"
+    >
+      Aztecs
+    </span>
+    <span
+      className="expansion"
+    >
+      The Conquerors
+    </span>
+  </h2>
+  <div
+    className="lightBg"
+  >
+    <div
+      className="groupHeading"
+    >
+      Army Type
+    </div>
+    <div
+      className="item"
+    >
+      Infantry and Monk
+    </div>
+  </div>
+  <div
+    className="darkBg"
+  >
+    <div
+      className="groupHeading"
+    >
+      Team Bonus
+    </div>
+    <div
+      className="item"
+    >
+      Relics generate +33% gold
+    </div>
+  </div>
+  <div
+    className="lightBg"
+  >
+    <div
+      className="groupHeading"
+    >
+      Civilization Bonus
+    </div>
+    <div>
+      <div
+        className="item"
+      >
+        Villagers carry +5
+      </div>
+      <div
+        className="item"
+      >
+        Military units created 15% faster
+      </div>
+      <div
+        className="item"
+      >
+        +5 Monk hit points for each Monastery technology
+      </div>
+      <div
+        className="item"
+      >
+        Loom free
+      </div>
+    </div>
+  </div>
+  <div
+    className="darkBg"
+  >
+    <div
+      className="groupHeading"
+    >
+      Unique Unit
+    </div>
+    <div>
+      <div
+        className="itemLink"
+        title="Link disabled"
+      >
+        jaguar warrior
+      </div>
+    </div>
+  </div>
+  <div
+    className="lightBg"
+  >
+    <div
+      className="groupHeading"
+    >
+      Unique Technology
+    </div>
+    <div>
+      <div
+        className="itemLink"
+        title="Link disabled"
+      >
+        garland wars
+      </div>
+    </div>
+  </div>
+</div>
+`;
